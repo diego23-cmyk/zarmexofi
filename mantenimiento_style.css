@@ -354,4 +354,45 @@ button:hover {
         border-radius: 12px;
     }
 }
+/* ===== FIX MENU MOVIL (NO BORRA NADA) ===== */
+@media (max-width: 768px) {
+
+    .navbar-zarmex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* OCULTAR MENU POR DEFECTO */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #B7E0C6;
+        width: 260px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none; /* ← ESTO ES CLAVE */
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    }
+
+    /* MOSTRAR MENU CUANDO SE ACTIVA */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* MOSTRAR ICONO */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Dropdown correcto en móvil */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 12px;
+    }
+}
 
