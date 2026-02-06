@@ -291,4 +291,67 @@ button:hover {
 .whatsapp-float:hover {
     transform: scale(1.15);
 }
+/* ================= MENU MOVIL ================= */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #02644c;
+    border-radius: 3px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 140px;
+    }
+
+    .navbar-zarmex {
+        flex-direction: row;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #B7E0C6;
+        width: 230px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Dropdown móvil */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #1f6f73;
+        border-radius: 12px;
+    }
+}
 
