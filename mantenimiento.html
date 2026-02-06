@@ -15,6 +15,7 @@
     </div>
 
   <nav class="nav-links">
+
     <a href="index.html">Inicio</a>
     <a href="productos.html">Productos</a>
 
@@ -38,6 +39,12 @@
 
     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
     <a href="sesion.html">Inicio de Sesión</a>
+    <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 </header>
 
 <div class="contenedor">
@@ -143,5 +150,14 @@
 </footer>
 
 <script src="mantenimiento.js"></script>
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
